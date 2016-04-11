@@ -209,8 +209,8 @@ public class DOAlertController : UIViewController, UITextFieldDelegate, UIViewCo
     // ButtonContainer
     private var buttonContainer = UIView()
     private var buttonContainerHeightConstraint: NSLayoutConstraint!
-    private let buttonHeight: CGFloat = 44.0
-    private var buttonMargin: CGFloat = 10.0
+    public var buttonHeight: CGFloat = 44.0
+    public var buttonMargin: CGFloat = 10.0
     
     // Actions
     private(set) var actions: [AnyObject] = []
@@ -218,9 +218,9 @@ public class DOAlertController : UIViewController, UITextFieldDelegate, UIViewCo
     // Buttons
     private var buttons = [UIButton]()
     public var buttonFont: [DOAlertActionStyle : UIFont!] = [
-        .Default : UIFont(name: "HelveticaNeue-Bold", size: 16),
-        .Cancel  : UIFont(name: "HelveticaNeue-Bold", size: 16),
-        .Destructive  : UIFont(name: "HelveticaNeue-Bold", size: 16)
+        .Default : UIFont(name: "HelveticaNeue-Bold", size: 14),
+        .Cancel  : UIFont(name: "HelveticaNeue-Bold", size: 14),
+        .Destructive  : UIFont(name: "HelveticaNeue-Bold", size: 14)
     ]
     public var buttonTextColor: [DOAlertActionStyle : UIColor] = [
         .Default : UIColor.whiteColor(),
@@ -237,7 +237,7 @@ public class DOAlertController : UIViewController, UITextFieldDelegate, UIViewCo
         .Cancel  : UIColor(red:140/255, green:152/255, blue:153/255, alpha:1),
         .Destructive  : UIColor(red:234/255, green:97/255, blue:83/255, alpha:1)
     ]
-    private var buttonCornerRadius: CGFloat = 4.0
+    public var buttonCornerRadius: CGFloat = 4.0
     
     private var layoutFlg = false
     private var keyboardHeight: CGFloat = 0.0
